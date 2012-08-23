@@ -12,7 +12,7 @@
                          /*          DELETE_SEQUENCE                          */
 // #define BELL_AUDIBLE           TRUE
 // #define BELL_VISIBLE           TRUE
-// #define BELL_URGENT            TRUE
+#define BELL_URGENT            TRUE
 // #define BUTTON_ORDER_BY_RCFILE TRUE
 // #define CLOSE_DIALOG           TRUE  /* Dialog to confirm close event      */
 // #define CLOSE_SAFELY           TRUE  /* Do not kill running applications   */
@@ -34,19 +34,19 @@
 // #define COMMAND_FONT           TRUE  /* -fn option, to assign font & size  */
 // #define COMMAND_GEOMETRY       TRUE  /* -g +X+Y option, to assign geometry */
 // #define COMMAND_LOGIN_SHELL    TRUE  /* -ls option, to enable login shell  */
-// #define COMMAND_SET_TITLE      TRUE  /* -T or -title to set program title  */
+#define COMMAND_SET_TITLE      TRUE  /* -T or -title to set program title  */
 // #define COMMAND_SHOW_HELP      TRUE  /* -h option, show help               */
 #define    COMMAND_SHOW_OPTIONS   TRUE  /* -o option, show build-time options */
 #define    COMMAND_SHOW_VERSION   TRUE  /* -v option, show program version    */
 // #define COMMAND_TAB_NUMBERS    TRUE  /* -[2-9] options, to set tab numbers */
-// #define CURSOR_BLINKS          TRUE
+#define CURSOR_BLINKS          FALSE
 // #define CURSOR_COLOR           "blue"
 // #define CURSOR_SHAPE  /* Options: BLOCK, IBEAM, UNDERLINE                  */
 // #define DEFAULT_COMMAND        g_getenv("SHELL")
 // #define DEFAULT_DIRECTORY      g_get_current_dir()
 // #define DEFAULT_TERMINAL_SIZE  80x24
 // #define EXPORT_WINDOWID        TRUE
-// #define FONT                   "Monospace 10"
+#define FONT                   "AK Sans Mono 8"
 // #define FONT_ANTI_ALIAS        TRUE
 // #define FONT_ENABLE_BOLD_TEXT  TRUE
 // #define MOUSE_CTRL_SATURATION  TRUE  /* Scroll left or right to adjust it  */
@@ -60,11 +60,11 @@
 // #define SCROLL_LINES           1000  /* Negative value means unlimited     */
 // #define SCROLL_ON_KEYSTROKE    TRUE
 // #define SCROLL_ON_OUTPUT       TRUE
-#define    SCROLLBAR              RIGHT /* Options: LEFT, RIGHT, OFF_L, OFF_R */
+#define    SCROLLBAR              OFF_R /* Options: LEFT, RIGHT, OFF_L, OFF_R */
 // #define SHOW_WINDOW_BORDER     TRUE
 // #define SHOW_WINDOW_DECORATED  TRUE
 #define    SHOW_WINDOW_ICON       TRUE
-#define    STATUS_BAR             TRUE
+#define    STATUS_BAR             FALSE
 // #define WINDOW_TITLE_DYNAMIC   TRUE  /* for xterm escape sequences         */
 #define    WORD_CHARS             "-A-Za-z0-9_$.+!*(),;:@&=?/~#%"
 
@@ -96,7 +96,7 @@
             *          "Auto-click" (when there is only one effective menu item)
             */
 
-#define    TAB                    TRUE
+#define    TAB                    FALSE
 // #define TAB_BORDER             0
 // #define TAB_CLOSE_BUTTON       TRUE
 // #define TAB_EXPANDED_WIDTH     TRUE
