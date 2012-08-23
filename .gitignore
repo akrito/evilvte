@@ -1,0 +1,12 @@
+*.pkg.tar.xz
+misc/evilvte.1
+pkg/
+src/config.h
+src/config.mk
+src/custom.h
+src/evilvte
+src/evilvte.h
+src/evilvte.o
+src/install.sh
+src/showvte
+src/uninstall.sh
