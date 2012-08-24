@@ -4,7 +4,7 @@
 # Contributor: Pardi Tommaso <homer.j.simson.bis at gmail dot com>
 
 pkgname=evilvte-git
-pkgver=20120823
+pkgver=20120824
 pkgrel=1
 pkgdesc='VTE based, highly customizable terminal emulator'
 url='http://www.calno.com/evilvte/'

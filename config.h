@@ -10,8 +10,8 @@
                          /*          DELETE_SEQUENCE                          */
 // #define DELETE_KEY    /* Options: AUTO, BACKSPACE, DELETE, ERASE_TTY,      */
                          /*          DELETE_SEQUENCE                          */
-// #define BELL_AUDIBLE           TRUE
-// #define BELL_VISIBLE           TRUE
+#define BELL_AUDIBLE           FALSE
+#define BELL_VISIBLE           FALSE
 #define BELL_URGENT            TRUE
 // #define BUTTON_ORDER_BY_RCFILE TRUE
 // #define CLOSE_DIALOG           TRUE  /* Dialog to confirm close event      */
@@ -46,7 +46,7 @@
 // #define DEFAULT_DIRECTORY      g_get_current_dir()
 // #define DEFAULT_TERMINAL_SIZE  80x24
 // #define EXPORT_WINDOWID        TRUE
-#define FONT                   "AK Sans Mono 7.5"
+#define FONT                   "DejaVu Sans Mono 7.5"
 // #define FONT_ANTI_ALIAS        TRUE
 // #define FONT_ENABLE_BOLD_TEXT  TRUE
 // #define MOUSE_CTRL_SATURATION  TRUE  /* Scroll left or right to adjust it  */
@@ -129,8 +129,8 @@
  * See /usr/include/gtk-?.0/gdk/gdkkeysyms.h for GDK_* definitions.           */
 
 #define    HOTKEY                       TRUE
-// #define HOTKEY_COPY                  CTRL_SHIFT(GDK_C) || CTRL_SHIFT(GDK_c)
-// #define HOTKEY_PASTE                 CTRL_SHIFT(GDK_V) || CTRL_SHIFT(GDK_v)
+#define HOTKEY_COPY                  CTRL_SHIFT(GDK_C) || CTRL_SHIFT(GDK_c)
+#define HOTKEY_PASTE                 CTRL_SHIFT(GDK_V) || CTRL_SHIFT(GDK_v)
 // #define HOTKEY_SELECT_ALL            CTRL_SHIFT(GDK_S) || CTRL_SHIFT(GDK_s)
 // #define HOTKEY_COLOR_BACKGROUND      CTRL_SHIFT(GDK_B) || CTRL_SHIFT(GDK_b)
 // #define HOTKEY_EDIT_ENCODING         CTRL_SHIFT(GDK_U) || CTRL_SHIFT(GDK_u)
