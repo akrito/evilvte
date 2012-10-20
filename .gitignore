@@ -10,3 +10,4 @@ src/evilvte.o
 src/install.sh
 src/showvte
 src/uninstall.sh
+package/
