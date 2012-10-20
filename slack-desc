@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+       |-----handy-ruler-------------------------------------------------------|
+evilvte: Evilvte (VTE Based Terminal Emulator)
+evilvte:
+evilvte: Evilvte is a terminal  emulator. It  supports  almost  everything VTE
+evilvte: provides. It also supports tabs, automatic hiding of the tab bar, and
+evilvte: the ability  to switch  encoding at runtime. Configuration is done by
+evilvte: editing the source code  and  recompiling it. The size  of a standard
+evilvte: stripped binary of evilvte is less than 10 kilobytes.
+evilvte:
+evilvte:
+evilvte:
+evilvte:
