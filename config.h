@@ -18,7 +18,8 @@
 // #define CLOSE_SAFELY           TRUE  /* Do not kill running applications   */
 // #define COLOR_BACKGROUND       "white"
 // #define COLOR_FOREGROUND       "#000000"
-// #define COLOR_STYLE   /* Options: LINUX, RXVT, TANGO, XTERM, ZENBURN,      */
+#define COLOR_STYLE   HOLO
+                         /* Options: LINUX, RXVT, TANGO, XTERM, ZENBURN,      */
                          /*          ZENBURN_DARK, SOLARIZED_DARK,            */
                          /*          SOLARIZED_LIGHT                          */
 // #define COLOR_TEXT_BOLD        "red"
@@ -53,7 +54,7 @@
 // #define MOUSE_CURSOR_AUTOHIDE  TRUE
 // #define PROGRAM_ALWAYS_ON_TOP  TRUE
 // #define PROGRAM_ICON           ".config/evilvte/icon.png"
-// #define PROGRAM_WM_CLASS       TRUE
+#define PROGRAM_WM_CLASS       TRUE
 // #define RECORD_LASTLOG         TRUE
 // #define RECORD_UTMP            TRUE
 // #define RECORD_WTMP            TRUE

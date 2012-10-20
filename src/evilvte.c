@@ -62,6 +62,7 @@
 #define ZENBURN         7
 #define SOLARIZED_DARK  8
 #define SOLARIZED_LIGHT 9
+#define HOLO            10
 
 #define LEFT   0
 #define RIGHT  1
@@ -1167,6 +1168,24 @@ const GdkColor color_style[16] = {
   { 0, 0x5757, 0x5757, 0xffff },
   { 0, 0xffff, 0x5757, 0xffff },
   { 0, 0x5757, 0xffff, 0xffff },
+  { 0, 0xffff, 0xffff, 0xffff }
+#endif
+#if COLOR_STYLE == HOLO
+  { 0, 0x0000, 0x0000, 0x0000 },
+  { 0, 0xcccc, 0x0000, 0x0000 },
+  { 0, 0x6666, 0x9999, 0x0000 },
+  { 0, 0xffff, 0x8888, 0x0000 },
+  { 0, 0x0000, 0x9999, 0xcccc },
+  { 0, 0x9999, 0x3333, 0xcccc },
+  { 0, 0x0000, 0x9999, 0xcccc },
+  { 0, 0xa8a8, 0xa8a8, 0xa8a8 },
+  { 0, 0x5757, 0x5757, 0x5757 },
+  { 0, 0xffff, 0x4444, 0x4444 },
+  { 0, 0x9999, 0xcccc, 0x0000 },
+  { 0, 0xffff, 0xbbbb, 0x3333 },
+  { 0, 0x3333, 0xb5b5, 0xe5e5 },
+  { 0, 0xaaaa, 0x6666, 0xcccc },
+  { 0, 0x3333, 0xb5b5, 0xe5e5 },
   { 0, 0xffff, 0xffff, 0xffff }
 #endif
 #if COLOR_STYLE == RXVT
@@ -3360,7 +3379,7 @@ bool at_dock_mode = FALSE;
   j = 1;
   while ((j < argc) && strncmp(argv[j], "-e", 3)) {
 #if PROGRAM_WM_CLASS
-    if (argc > (j + 1) && !strncmp(argv[j], "--name", 7))
+    if (argc > (j + 1) && !strncmp(argv[j], "-name", 6))
       wm_class_name = argv[j + 1];
     if (argc > (j + 1) && !strncmp(argv[j], "--class", 8))
       wm_class_class = argv[j + 1];
