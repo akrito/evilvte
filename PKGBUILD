@@ -4,7 +4,7 @@
 # Contributor: Pardi Tommaso <homer.j.simson.bis at gmail dot com>
 
 pkgname=evilvte-git
-pkgver=20120824
+pkgver=20120825
 pkgrel=1
 pkgdesc='VTE based, highly customizable terminal emulator'
 url='http://www.calno.com/evilvte/'
@@ -12,7 +12,7 @@ arch=('i686' 'x86_64')
 provides=('evilvte-git' 'evilvte')
 conflicts=('evilvte')
 license=('GPL2')
-depends=('vte3' 'hicolor-icon-theme')
+depends=('vte' 'hicolor-icon-theme')
 makedepends=('pkg-config')
 
 # Use these so pkgver gets updated, but we don't really care.
