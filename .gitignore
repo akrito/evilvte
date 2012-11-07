@@ -1,4 +1,5 @@
 *.pkg.tar.xz
+*.txz
 misc/evilvte.1
 pkg/
 src/config.h
