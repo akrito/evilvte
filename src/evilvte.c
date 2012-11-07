@@ -86,240 +86,6 @@
 #define USE_GTK_GRID
 #endif
 
-#ifdef RULE_THEM_ALL
-#ifndef GTK_STYLE_PROVIDER_PRIORITY_APPLICATION
-#define GTK_STYLE_PROVIDER_PRIORITY_APPLICATION 600
-#endif
-typedef struct _GdkColormap GdkColormap;
-typedef struct _GdkDrawable GdkDrawable;
-typedef struct _GtkCssProvider GtkCssProvider;
-typedef struct _GtkFontSelectionDialog GtkFontSelectionDialog;
-typedef struct _GtkScrollable GtkScrollable;
-typedef struct _GtkStyleProvider GtkStyleProvider;
-#undef GTK_BOX
-#define GTK_BOX (GtkBox*)
-#undef GTK_BUTTON
-#define GTK_BUTTON (GtkButton*)
-#undef GTK_COLOR_SELECTION
-#define GTK_COLOR_SELECTION (GtkColorSelection*)
-#undef GTK_COLOR_SELECTION_DIALOG
-#define GTK_COLOR_SELECTION_DIALOG (GtkColorSelectionDialog*)
-#undef GTK_CONTAINER
-#define GTK_CONTAINER (GtkContainer*)
-#undef GTK_DIALOG
-#define GTK_DIALOG (GtkDialog*)
-#undef GTK_ENTRY
-#define GTK_ENTRY (GtkEntry*)
-#undef GTK_FONT_SELECTION_DIALOG
-#define GTK_FONT_SELECTION_DIALOG (GtkFontSelectionDialog*)
-#undef GTK_IMAGE_MENU_ITEM
-#define GTK_IMAGE_MENU_ITEM (GtkImageMenuItem*)
-#undef GTK_LABEL
-#define GTK_LABEL (GtkLabel*)
-#undef GTK_MENU
-#define GTK_MENU (GtkMenu*)
-#undef GTK_MENU_ITEM
-#define GTK_MENU_ITEM (GtkMenuItem*)
-#undef GTK_MENU_SHELL
-#define GTK_MENU_SHELL (GtkMenuShell*)
-#undef GTK_NOTEBOOK
-#define GTK_NOTEBOOK (GtkNotebook*)
-#undef GTK_RANGE
-#define GTK_RANGE (GtkRange*)
-#undef GTK_SCROLLABLE
-#define GTK_SCROLLABLE (GtkScrollable*)
-#undef GTK_STATUSBAR
-#define GTK_STATUSBAR (GtkStatusbar*)
-#undef GTK_STYLE_PROVIDER
-#define GTK_STYLE_PROVIDER (GtkStyleProvider*)
-#undef GTK_WIDGET
-#define GTK_WIDGET (GtkWidget*)
-#undef GTK_WINDOW
-#define GTK_WINDOW (GtkWindow*)
-#undef USE_GTK_GRID
-#undef VTE_TERMINAL
-#define VTE_TERMINAL (VteTerminal*)
-#define gdk_color_parse (*p_gdk_color_parse)
-#define gdk_device_warp (*p_gdk_device_warp)
-#define gdk_disable_multidevice (*p_gdk_disable_multidevice)
-#define gdk_display_get_default (*p_gdk_display_get_default)
-#define gdk_display_get_default_screen (*p_gdk_display_get_default_screen)
-#define gdk_display_warp_pointer (*p_gdk_display_warp_pointer)
-#define gdk_screen_get_rgba_colormap (*p_gdk_screen_get_rgba_colormap)
-#define gdk_screen_get_rgba_visual (*p_gdk_screen_get_rgba_visual)
-#define gdk_window_get_display (*p_gdk_window_get_display)
-#define gdk_x11_drawable_get_xid (*p_gdk_x11_drawable_get_xid)
-#define gdk_x11_window_get_xid (*p_gdk_x11_window_get_xid)
-#define gtk_box_pack_start (*p_gtk_box_pack_start)
-#define gtk_button_new (*p_gtk_button_new)
-#define gtk_button_set_focus_on_click (*p_gtk_button_set_focus_on_click)
-#define gtk_button_set_image (*p_gtk_button_set_image)
-#define gtk_button_set_relief (*p_gtk_button_set_relief)
-#define gtk_clipboard_get (*p_gtk_clipboard_get)
-#define gtk_clipboard_get_for_display (*p_gtk_clipboard_get_for_display)
-#define gtk_clipboard_set_text (*p_gtk_clipboard_set_text)
-#define gtk_clipboard_wait_is_text_available (*p_gtk_clipboard_wait_is_text_available)
-#define gtk_color_selection_dialog_get_color_selection (*p_gtk_color_selection_dialog_get_color_selection)
-#define gtk_color_selection_dialog_new (*p_gtk_color_selection_dialog_new)
-#define gtk_color_selection_get_current_color (*p_gtk_color_selection_get_current_color)
-#define gtk_color_selection_set_current_color (*p_gtk_color_selection_set_current_color)
-#define gtk_container_add (*p_gtk_container_add)
-#define gtk_container_child_set (*p_gtk_container_child_set)
-#define gtk_css_provider_load_from_data (*p_gtk_css_provider_load_from_data)
-#define gtk_css_provider_new (*p_gtk_css_provider_new)
-#define gtk_dialog_get_content_area (*p_gtk_dialog_get_content_area)
-#define gtk_dialog_new_with_buttons (*p_gtk_dialog_new_with_buttons)
-#define gtk_dialog_run (*p_gtk_dialog_run)
-#define gtk_dialog_set_default_response (*p_gtk_dialog_set_default_response)
-#define gtk_entry_get_text (*p_gtk_entry_get_text)
-#define gtk_entry_new (*p_gtk_entry_new)
-#define gtk_entry_set_activates_default (*p_gtk_entry_set_activates_default)
-#define gtk_entry_set_text (*p_gtk_entry_set_text)
-#define gtk_font_selection_dialog_get_font_name (*p_gtk_font_selection_dialog_get_font_name)
-#define gtk_font_selection_dialog_new (*p_gtk_font_selection_dialog_new)
-#define gtk_font_selection_dialog_set_font_name (*p_gtk_font_selection_dialog_set_font_name)
-#define gtk_hbox_new (*p_gtk_hbox_new)
-#define gtk_hscale_new_with_range (*p_gtk_hscale_new_with_range)
-#define gtk_image_menu_item_new_from_stock (*p_gtk_image_menu_item_new_from_stock)
-#define gtk_image_menu_item_new_with_label (*p_gtk_image_menu_item_new_with_label)
-#define gtk_image_menu_item_new_with_mnemonic (*p_gtk_image_menu_item_new_with_mnemonic)
-#define gtk_image_menu_item_set_image (*p_gtk_image_menu_item_set_image)
-#define gtk_image_new_from_stock (*p_gtk_image_new_from_stock)
-#define gtk_init (*p_gtk_init)
-#define gtk_label_get_text (*p_gtk_label_get_text)
-#define gtk_label_new (*p_gtk_label_new)
-#define gtk_main (*p_gtk_main)
-#define gtk_main_quit (*p_gtk_main_quit)
-#define gtk_menu_item_new_with_label (*p_gtk_menu_item_new_with_label)
-#define gtk_menu_item_new_with_mnemonic (*p_gtk_menu_item_new_with_mnemonic)
-#define gtk_menu_item_set_submenu (*p_gtk_menu_item_set_submenu)
-#define gtk_menu_new (*p_gtk_menu_new)
-#define gtk_menu_popup (*p_gtk_menu_popup)
-#define gtk_menu_shell_append (*p_gtk_menu_shell_append)
-#define gtk_menu_shell_prepend (*p_gtk_menu_shell_prepend)
-#define gtk_notebook_append_page (*p_gtk_notebook_append_page)
-#define gtk_notebook_get_current_page (*p_gtk_notebook_get_current_page)
-#define gtk_notebook_get_n_pages (*p_gtk_notebook_get_n_pages)
-#define gtk_notebook_get_nth_page (*p_gtk_notebook_get_nth_page)
-#define gtk_notebook_get_show_tabs (*p_gtk_notebook_get_show_tabs)
-#define gtk_notebook_get_tab_label (*p_gtk_notebook_get_tab_label)
-#define gtk_notebook_new (*p_gtk_notebook_new)
-#define gtk_notebook_popup_enable (*p_gtk_notebook_popup_enable)
-#define gtk_notebook_prepend_page (*p_gtk_notebook_prepend_page)
-#define gtk_notebook_remove_page (*p_gtk_notebook_remove_page)
-#define gtk_notebook_set_current_page (*p_gtk_notebook_set_current_page)
-#define gtk_notebook_set_scrollable (*p_gtk_notebook_set_scrollable)
-#define gtk_notebook_set_show_border (*p_gtk_notebook_set_show_border)
-#define gtk_notebook_set_show_tabs (*p_gtk_notebook_set_show_tabs)
-#define gtk_notebook_set_tab_border (*p_gtk_notebook_set_tab_border)
-#define gtk_notebook_set_tab_hborder (*p_gtk_notebook_set_tab_hborder)
-#define gtk_notebook_set_tab_label (*p_gtk_notebook_set_tab_label)
-#define gtk_notebook_set_tab_label_text (*p_gtk_notebook_set_tab_label_text)
-#define gtk_notebook_set_tab_pos (*p_gtk_notebook_set_tab_pos)
-#define gtk_notebook_set_tab_reorderable (*p_gtk_notebook_set_tab_reorderable)
-#define gtk_notebook_set_tab_vborder (*p_gtk_notebook_set_tab_vborder)
-#define gtk_range_get_value (*p_gtk_range_get_value)
-#define gtk_range_set_value (*p_gtk_range_set_value)
-#define gtk_rc_parse_string (*p_gtk_rc_parse_string)
-#define gtk_scale_new_with_range (*p_gtk_scale_new_with_range)
-#define gtk_scrollable_get_vadjustment (*p_gtk_scrollable_get_vadjustment)
-#define gtk_scrollbar_new (*p_gtk_scrollbar_new)
-#define gtk_separator_menu_item_new (*p_gtk_separator_menu_item_new)
-#define gtk_settings_get_default (*p_gtk_settings_get_default)
-#define gtk_statusbar_new (*p_gtk_statusbar_new)
-#define gtk_statusbar_push (*p_gtk_statusbar_push)
-#define gtk_style_context_add_provider_for_screen (*p_gtk_style_context_add_provider_for_screen)
-#define gtk_test_widget_click (*p_gtk_test_widget_click)
-#define gtk_test_widget_send_key (*p_gtk_test_widget_send_key)
-#define gtk_vbox_new (*p_gtk_vbox_new)
-#define gtk_vscrollbar_new (*p_gtk_vscrollbar_new)
-#define gtk_widget_destroy (*p_gtk_widget_destroy)
-#define gtk_widget_get_screen (*p_gtk_widget_get_screen)
-#define gtk_widget_get_window (*p_gtk_widget_get_window)
-#define gtk_widget_hide (*p_gtk_widget_hide)
-#define gtk_widget_realize (*p_gtk_widget_realize)
-#define gtk_widget_set_can_focus (*p_gtk_widget_set_can_focus)
-#define gtk_widget_set_colormap (*p_gtk_widget_set_colormap)
-#define gtk_widget_set_hexpand (*p_gtk_widget_set_hexpand)
-#define gtk_widget_set_sensitive (*p_gtk_widget_set_sensitive)
-#define gtk_widget_set_size_request (*p_gtk_widget_set_size_request)
-#define gtk_widget_set_vexpand (*p_gtk_widget_set_vexpand)
-#define gtk_widget_set_visual (*p_gtk_widget_set_visual)
-#define gtk_widget_show (*p_gtk_widget_show)
-#define gtk_widget_show_all (*p_gtk_widget_show_all)
-#define gtk_widget_style_get (*p_gtk_widget_style_get)
-#define gtk_window_maximize (*p_gtk_window_maximize)
-#define gtk_window_new (*p_gtk_window_new)
-#define gtk_window_parse_geometry (*p_gtk_window_parse_geometry)
-#define gtk_window_resize (*p_gtk_window_resize)
-#define gtk_window_resize_grip_is_visible (*p_gtk_window_resize_grip_is_visible)
-#define gtk_window_set_decorated (*p_gtk_window_set_decorated)
-#define gtk_window_set_focus (*p_gtk_window_set_focus)
-#define gtk_window_set_has_resize_grip (*p_gtk_window_set_has_resize_grip)
-#define gtk_window_set_icon_from_file (*p_gtk_window_set_icon_from_file)
-#define gtk_window_set_keep_above (*p_gtk_window_set_keep_above)
-#define gtk_window_set_keep_below (*p_gtk_window_set_keep_below)
-#define gtk_window_set_skip_pager_hint (*p_gtk_window_set_skip_pager_hint)
-#define gtk_window_set_skip_taskbar_hint (*p_gtk_window_set_skip_taskbar_hint)
-#define gtk_window_set_title (*p_gtk_window_set_title)
-#define gtk_window_set_type_hint (*p_gtk_window_set_type_hint)
-#define gtk_window_set_urgency_hint (*p_gtk_window_set_urgency_hint)
-#define gtk_window_set_wmclass (*p_gtk_window_set_wmclass)
-#define gtk_window_unmaximize (*p_gtk_window_unmaximize)
-#define vte_terminal_accessible_new (*p_vte_terminal_accessible_new)
-#define vte_terminal_copy_clipboard (*p_vte_terminal_copy_clipboard)
-#define vte_terminal_fork_command (*p_vte_terminal_fork_command)
-#define vte_terminal_fork_command_full (*p_vte_terminal_fork_command_full)
-#define vte_terminal_get_adjustment (*p_vte_terminal_get_adjustment)
-#define vte_terminal_get_char_height (*p_vte_terminal_get_char_height)
-#define vte_terminal_get_char_width (*p_vte_terminal_get_char_width)
-#define vte_terminal_get_encoding (*p_vte_terminal_get_encoding)
-#define vte_terminal_get_has_selection (*p_vte_terminal_get_has_selection)
-#define vte_terminal_get_window_title (*p_vte_terminal_get_window_title)
-#define vte_terminal_im_append_menuitems (*p_vte_terminal_im_append_menuitems)
-#define vte_terminal_match_add_gregex (*p_vte_terminal_match_add_gregex)
-#define vte_terminal_match_check (*p_vte_terminal_match_check)
-#define vte_terminal_new (*p_vte_terminal_new)
-#define vte_terminal_paste_clipboard (*p_vte_terminal_paste_clipboard)
-#define vte_terminal_reset (*p_vte_terminal_reset)
-#define vte_terminal_search_find_next (*p_vte_terminal_search_find_next)
-#define vte_terminal_search_find_previous (*p_vte_terminal_search_find_previous)
-#define vte_terminal_search_set_gregex (*p_vte_terminal_search_set_gregex)
-#define vte_terminal_search_set_wrap_around (*p_vte_terminal_search_set_wrap_around)
-#define vte_terminal_select_all (*p_vte_terminal_select_all)
-#define vte_terminal_set_allow_bold (*p_vte_terminal_set_allow_bold)
-#define vte_terminal_set_audible_bell (*p_vte_terminal_set_audible_bell)
-#define vte_terminal_set_background_image_file (*p_vte_terminal_set_background_image_file)
-#define vte_terminal_set_background_saturation (*p_vte_terminal_set_background_saturation)
-#define vte_terminal_set_background_tint_color (*p_vte_terminal_set_background_tint_color)
-#define vte_terminal_set_background_transparent (*p_vte_terminal_set_background_transparent)
-#define vte_terminal_set_backspace_binding (*p_vte_terminal_set_backspace_binding)
-#define vte_terminal_set_color_background (*p_vte_terminal_set_color_background)
-#define vte_terminal_set_color_bold (*p_vte_terminal_set_color_bold)
-#define vte_terminal_set_color_cursor (*p_vte_terminal_set_color_cursor)
-#define vte_terminal_set_color_dim (*p_vte_terminal_set_color_dim)
-#define vte_terminal_set_color_foreground (*p_vte_terminal_set_color_foreground)
-#define vte_terminal_set_color_highlight (*p_vte_terminal_set_color_highlight)
-#define vte_terminal_set_colors (*p_vte_terminal_set_colors)
-#define vte_terminal_set_cursor_blink_mode (*p_vte_terminal_set_cursor_blink_mode)
-#define vte_terminal_set_cursor_shape (*p_vte_terminal_set_cursor_shape)
-#define vte_terminal_set_default_colors (*p_vte_terminal_set_default_colors)
-#define vte_terminal_set_delete_binding (*p_vte_terminal_set_delete_binding)
-#define vte_terminal_set_emulation (*p_vte_terminal_set_emulation)
-#define vte_terminal_set_encoding (*p_vte_terminal_set_encoding)
-#define vte_terminal_set_font_from_string (*p_vte_terminal_set_font_from_string)
-#define vte_terminal_set_font_from_string_full (*p_vte_terminal_set_font_from_string_full)
-#define vte_terminal_set_mouse_autohide (*p_vte_terminal_set_mouse_autohide)
-#define vte_terminal_set_opacity (*p_vte_terminal_set_opacity)
-#define vte_terminal_set_scroll_background (*p_vte_terminal_set_scroll_background)
-#define vte_terminal_set_scroll_on_keystroke (*p_vte_terminal_set_scroll_on_keystroke)
-#define vte_terminal_set_scroll_on_output (*p_vte_terminal_set_scroll_on_output)
-#define vte_terminal_set_scrollback_lines (*p_vte_terminal_set_scrollback_lines)
-#define vte_terminal_set_size (*p_vte_terminal_set_size)
-#define vte_terminal_set_visible_bell (*p_vte_terminal_set_visible_bell)
-#define vte_terminal_set_word_chars (*p_vte_terminal_set_word_chars)
-#endif
-
 #if !GTK_CHECK_VERSION(2,13,0)
 #undef HOTKEY_MIMIC_SCROLL_UP
 #undef HOTKEY_MIMIC_SCROLL_DOWN
@@ -337,7 +103,7 @@ typedef struct _GtkStyleProvider GtkStyleProvider;
 #define gtk_widget_set_can_focus(x,y);
 #endif
 
-#if !defined(RULE_THEM_ALL) && !GTK_CHECK_VERSION(2,90,0)
+#if !GTK_CHECK_VERSION(2,90,0)
 #define gtk_scrollbar_new(x,y) gtk_vscrollbar_new(y)
 #define gtk_scale_new_with_range(w,x,y,z) gtk_hscale_new_with_range(x,y,z)
 #endif
@@ -346,7 +112,7 @@ typedef struct _GtkStyleProvider GtkStyleProvider;
 #define GTK_FONT_SELECTION_DIALOG
 #endif
 
-#if !defined(RULE_THEM_ALL) && GTK_CHECK_VERSION(2,91,0)
+#if GTK_CHECK_VERSION(2,91,0)
 #define gtk_widget_set_colormap gtk_widget_set_visual
 #define gdk_screen_get_rgba_colormap gdk_screen_get_rgba_visual
 #endif
@@ -356,16 +122,16 @@ typedef struct _GtkStyleProvider GtkStyleProvider;
 #define GTK_HAS_RESIZE_GRIP
 #endif
 
-#if !defined(RULE_THEM_ALL) && !defined(GTK_HAS_RESIZE_GRIP)
+#if !defined(GTK_HAS_RESIZE_GRIP)
 #define gtk_window_set_has_resize_grip(x,y)
 #endif
 
-#if !defined(RULE_THEM_ALL) && !GTK_CHECK_VERSION(2,91,1)
+#if !GTK_CHECK_VERSION(2,91,1)
 #define gtk_widget_set_hexpand(x,y);
 #define gtk_widget_set_vexpand(x,y);
 #endif
 
-#if !defined(RULE_THEM_ALL) && !GTK_CHECK_VERSION(2,91,2)
+#if !GTK_CHECK_VERSION(2,91,2)
 #undef GTK_SCROLLABLE
 #define GTK_SCROLLABLE VTE_TERMINAL
 #define gtk_scrollable_get_vadjustment vte_terminal_get_adjustment
@@ -379,26 +145,22 @@ typedef struct _GtkStyleProvider GtkStyleProvider;
 #define gtk_box_pack_start(v,w,x,y,z) gtk_container_add(GTK_CONTAINER(v),w)
 #endif
 
-#if !defined(RULE_THEM_ALL) && GTK_CHECK_VERSION(2,91,6)
+#if GTK_CHECK_VERSION(2,91,6)
 #define gdk_x11_drawable_get_xid gdk_x11_window_get_xid
 #endif
 
 #define EVILVTE_GET_WINDOW gtk_widget_get_window
-#ifdef RULE_THEM_ALL
-#undef EVILVTE_GET_WINDOW
-#define EVILVTE_GET_WINDOW (GdkDrawable*)gtk_widget_get_window
-#endif
 
-#if !defined(RULE_THEM_ALL) && !GTK_CHECK_VERSION(2,99,0)
+#if !GTK_CHECK_VERSION(2,99,0)
 #define gdk_device_warp(w,x,y,z) gdk_display_warp_pointer(display,x,y,z)
 #endif
 
-#if !defined(RULE_THEM_ALL) && GTK_CHECK_VERSION(3,1,6) && !defined(USE_GTK_GRID) && defined(GTK_DISABLE_DEPRECATED)
+#if GTK_CHECK_VERSION(3,1,6) && !defined(USE_GTK_GRID) && defined(GTK_DISABLE_DEPRECATED)
 #define gtk_hbox_new (GtkWidget*)gtk_hbox_new
 #define gtk_vbox_new (GtkWidget*)gtk_vbox_new
 #endif
 
-#if !defined(RULE_THEM_ALL) && GTK_CHECK_VERSION(3,1,90)
+#if GTK_CHECK_VERSION(3,1,90)
 #define gtk_font_selection_dialog_new(x) gtk_font_chooser_dialog_new(x,NULL)
 #define gtk_font_selection_dialog_get_font_name gtk_font_chooser_get_font
 #define gtk_font_selection_dialog_set_font_name gtk_font_chooser_set_font
@@ -406,7 +168,7 @@ typedef struct _GtkStyleProvider GtkStyleProvider;
 #define GTK_FONT_SELECTION_DIALOG GTK_FONT_CHOOSER
 #endif
 
-#if !defined(RULE_THEM_ALL) && GTK_CHECK_VERSION(3,3,16)
+#if GTK_CHECK_VERSION(3,3,16)
 #undef GTK_COLOR_SELECTION
 #define GTK_COLOR_SELECTION GTK_COLOR_CHOOSER
 #define gtk_color_selection_dialog_get_color_selection GTK_COLOR_CHOOSER
@@ -452,22 +214,17 @@ typedef struct _GtkStyleProvider GtkStyleProvider;
 
 #ifndef USE_ACCESSIBLE
 #define USE_ACCESSIBLE FALSE
-#if defined(RULE_THEM_ALL) || VTE_CHECK_VERSION(0,29,0)
+#if VTE_CHECK_VERSION(0,29,0)
 #undef USE_ACCESSIBLE
 #define USE_ACCESSIBLE TRUE
 #endif
 #endif
 
 #define VTE_WINDOW_RESIZE(x,y,z) gtk_window_resize(x,y,z)
-#if defined(RULE_THEM_ALL) || (VTE_CHECK_VERSION(0,27,1) && GTK_CHECK_VERSION(2,91,1))
+#if (VTE_CHECK_VERSION(0,27,1) && GTK_CHECK_VERSION(2,91,1))
 #ifndef VTE_FUNNY
 #undef VTE_WINDOW_RESIZE
-#ifdef RULE_THEM_ALL
-#define VTE_WINDOW_RESIZE(x,y,z) if (with_gtk == 2) gtk_window_resize(x,y,z)
-#endif
-#ifndef RULE_THEM_ALL
 #define VTE_WINDOW_RESIZE(x,y,z)
-#endif
 #endif
 #ifndef VTE_COLUMNS
 #define VTE_COLUMNS 80
@@ -1434,196 +1191,6 @@ struct terminal {
 
 struct terminal *term;
 
-#ifdef RULE_THEM_ALL
-#define GET_GTK_TWO (p_hdl_gtk = dlopen("libgtk-x11-2.0.so.0", RTLD_LAZY|RTLD_LOCAL))
-#define GET_GTK_THREE (p_hdl_gtk = dlopen("libgtk-3.so.0", RTLD_LAZY|RTLD_LOCAL))
-#define GET_VTE_TWO (p_hdl_vte = dlopen("libvte.so.9", RTLD_LAZY|RTLD_LOCAL))
-#define GET_VTE_THREE (p_hdl_vte = dlopen("libvte2_90.so.9", RTLD_LAZY|RTLD_LOCAL))
-gboolean (*p_gdk_color_parse)(const gchar *spec, GdkColor *color);
-void (*p_gdk_device_warp)(GdkDevice *device, GdkScreen *screen, gint x, gint y);
-void (*p_gdk_disable_multidevice)(void);
-GdkDisplay* (*p_gdk_display_get_default)(void);
-GdkScreen* (*p_gdk_display_get_default_screen)(GdkDisplay *display);
-void (*p_gdk_display_warp_pointer)(GdkDisplay *display, GdkScreen *screen, gint x, gint y);
-GdkColormap* (*p_gdk_screen_get_rgba_colormap)(GdkScreen *screen);
-GdkVisual* (*p_gdk_screen_get_rgba_visual)(GdkScreen *screen);
-GdkDisplay* (*p_gdk_window_get_display)(GdkWindow *window);
-XID (*p_gdk_x11_drawable_get_xid)(GdkDrawable *drawable);
-Window (*p_gdk_x11_window_get_xid)(GdkWindow *window);
-void (*p_gtk_box_pack_start)(GtkBox *box, GtkWidget *child, gboolean expand, gboolean fill, guint padding);
-GtkWidget* (*p_gtk_button_new)(void);
-void (*p_gtk_button_set_focus_on_click)(GtkButton *button, gboolean focus_on_click);
-void (*p_gtk_button_set_image)(GtkButton *button, GtkWidget *image);
-void (*p_gtk_button_set_relief)(GtkButton *button, GtkReliefStyle newstyle);
-GtkClipboard* (*p_gtk_clipboard_get)(GdkAtom selection);
-GtkClipboard* (*p_gtk_clipboard_get_for_display)(GdkDisplay *display, GdkAtom selection);
-void (*p_gtk_clipboard_set_text)(GtkClipboard *clipboard, const gchar *text, gint len);
-gboolean (*p_gtk_clipboard_wait_is_text_available)(GtkClipboard *clipboard);
-GtkWidget* (*p_gtk_color_selection_dialog_get_color_selection)(GtkColorSelectionDialog *colorsel);
-GtkWidget* (*p_gtk_color_selection_dialog_new)(const gchar *title);
-void (*p_gtk_color_selection_get_current_color)(GtkColorSelection *colorsel, GdkColor *color);
-void (*p_gtk_color_selection_set_current_color)(GtkColorSelection *colorsel, const GdkColor *color);
-void (*p_gtk_container_add)(GtkContainer *container, GtkWidget *widget);
-void (*p_gtk_container_child_set)(GtkContainer *container, GtkWidget *child, const gchar *first_prop_name, ...);
-gboolean (*p_gtk_css_provider_load_from_data)(GtkCssProvider *css_provider, const gchar *data, gssize length, GError **error);
-GtkCssProvider* (*p_gtk_css_provider_new)(void);
-GtkWidget* (*p_gtk_dialog_get_content_area)(GtkDialog *dialog);
-GtkWidget* (*p_gtk_dialog_new_with_buttons)(const gchar *title, GtkWindow *parent, GtkDialogFlags flags, const gchar *first_button_text, ...);
-gint (*p_gtk_dialog_run)(GtkDialog *dialog);
-void (*p_gtk_dialog_set_default_response)(GtkDialog *dialog, gint response_id);
-const gchar* (*p_gtk_entry_get_text)(GtkEntry *entry);
-GtkWidget* (*p_gtk_entry_new)(void);
-void (*p_gtk_entry_set_activates_default)(GtkEntry *entry, gboolean setting);
-void (*p_gtk_entry_set_text)(GtkEntry *entry, const gchar *text);
-gchar* (*p_gtk_font_selection_dialog_get_font_name)(GtkFontSelectionDialog *fsd);
-GtkWidget* (*p_gtk_font_selection_dialog_new)(const gchar *title);
-gboolean (*p_gtk_font_selection_dialog_set_font_name)(GtkFontSelectionDialog *fsd, const gchar *fontname);
-GtkWidget* (*p_gtk_hbox_new)(gboolean homogeneous, gint spacing);
-GtkWidget* (*p_gtk_hscale_new_with_range)(gdouble min, gdouble max, gdouble step);
-GtkWidget* (*p_gtk_image_menu_item_new_from_stock)(const gchar *stock_id, GtkAccelGroup *accel_group);
-GtkWidget* (*p_gtk_image_menu_item_new_with_label)(const gchar *label);
-GtkWidget* (*p_gtk_image_menu_item_new_with_mnemonic)(const gchar *label);
-void (*p_gtk_image_menu_item_set_image)(GtkImageMenuItem *image_menu_item, GtkWidget *image);
-GtkWidget* (*p_gtk_image_new_from_stock)(const gchar *stock_id, GtkIconSize size);
-void (*p_gtk_init)(int *argc, char ***argv);
-const gchar* (*p_gtk_label_get_text)(GtkLabel *label);
-GtkWidget* (*p_gtk_label_new)(const gchar *str);
-void (*p_gtk_main)(void);
-void (*p_gtk_main_quit)(void);
-GtkWidget* (*p_gtk_menu_item_new_with_label)(const gchar *label);
-GtkWidget* (*p_gtk_menu_item_new_with_mnemonic)(const gchar *label);
-void (*p_gtk_menu_item_set_submenu)(GtkMenuItem *menu_item, GtkWidget *submenu);
-GtkWidget* (*p_gtk_menu_new)(void);
-void (*p_gtk_menu_popup)(GtkMenu *menu, GtkWidget *parent_menu_shell, GtkWidget *parent_menu_item, GtkMenuPositionFunc func, gpointer data, guint button, guint32 activate_time);
-void (*p_gtk_menu_shell_append)(GtkMenuShell *menu_shell, GtkWidget *child);
-void (*p_gtk_menu_shell_prepend)(GtkMenuShell *menu_shell, GtkWidget *child);
-gint (*p_gtk_notebook_append_page)(GtkNotebook *notebook, GtkWidget *child, GtkWidget *tab_label);
-gint (*p_gtk_notebook_get_current_page)(GtkNotebook *notebook);
-gint (*p_gtk_notebook_get_n_pages)(GtkNotebook *notebook);
-GtkWidget* (*p_gtk_notebook_get_nth_page)(GtkNotebook *notebook, gint page_num);
-gboolean (*p_gtk_notebook_get_show_tabs)(GtkNotebook *notebook);
-GtkWidget* (*p_gtk_notebook_get_tab_label)(GtkNotebook *notebook, GtkWidget *child);
-GtkWidget* (*p_gtk_notebook_new)(void);
-void (*p_gtk_notebook_popup_enable)(GtkNotebook *notebook);
-gint (*p_gtk_notebook_prepend_page)(GtkNotebook *notebook, GtkWidget *child, GtkWidget *tab_label);
-void (*p_gtk_notebook_remove_page)(GtkNotebook *notebook, gint page_num);
-void (*p_gtk_notebook_set_current_page)(GtkNotebook *notebook, gint page_num);
-void (*p_gtk_notebook_set_scrollable)(GtkNotebook *notebook, gboolean scrollable);
-void (*p_gtk_notebook_set_show_border)(GtkNotebook *notebook, gboolean show_border);
-void (*p_gtk_notebook_set_show_tabs)(GtkNotebook *notebook, gboolean show_tabs);
-void (*p_gtk_notebook_set_tab_border)(GtkNotebook *notebook, guint border_width);
-void (*p_gtk_notebook_set_tab_hborder)(GtkNotebook *notebook, guint tab_hborder);
-void (*p_gtk_notebook_set_tab_label)(GtkNotebook *notebook, GtkWidget *child, GtkWidget *tab_label);
-void (*p_gtk_notebook_set_tab_label_text)(GtkNotebook *notebook, GtkWidget *child, const gchar *tab_text);
-void (*p_gtk_notebook_set_tab_pos)(GtkNotebook *notebook, GtkPositionType pos);
-void (*p_gtk_notebook_set_tab_reorderable)(GtkNotebook *notebook, GtkWidget *child, gboolean reorderable);
-void (*p_gtk_notebook_set_tab_vborder)(GtkNotebook *notebook, guint tab_vborder);
-gdouble (*p_gtk_range_get_value)(GtkRange *range);
-void (*p_gtk_range_set_value)(GtkRange *range, gdouble value);
-void (*p_gtk_rc_parse_string)(const gchar *rc_string);
-GtkWidget* (*p_gtk_scale_new_with_range)(GtkOrientation orientation, gdouble min, gdouble max, gdouble step);
-GtkAdjustment* (*p_gtk_scrollable_get_vadjustment)(GtkScrollable *scrollable);
-GtkWidget* (*p_gtk_scrollbar_new)(GtkOrientation orientation, GtkAdjustment *adjustment);
-GtkWidget* (*p_gtk_separator_menu_item_new)(void);
-GtkSettings* (*p_gtk_settings_get_default)(void);
-GtkWidget* (*p_gtk_statusbar_new)(void);
-guint (*p_gtk_statusbar_push)(GtkStatusbar *statusbar, guint context_id, const gchar *text);
-void (*p_gtk_style_context_add_provider_for_screen)(GdkScreen *screen, GtkStyleProvider *provider, guint priority);
-gboolean (*p_gtk_test_widget_click)(GtkWidget *widget, guint button, GdkModifierType modifiers);
-gboolean (*p_gtk_test_widget_send_key)(GtkWidget *widget, guint keyval, GdkModifierType modifiers);
-GtkWidget* (*p_gtk_vbox_new)(gboolean homogeneous, gint spacing);
-GtkWidget* (*p_gtk_vscrollbar_new)(GtkAdjustment *adjustment);
-void (*p_gtk_widget_destroy)(GtkWidget *widget);
-GdkScreen* (*p_gtk_widget_get_screen)(GtkWidget *widget);
-GdkWindow* (*p_gtk_widget_get_window)(GtkWidget *widget);
-void (*p_gtk_widget_hide)(GtkWidget *widget);
-void (*p_gtk_widget_realize)(GtkWidget *widget);
-void (*p_gtk_widget_set_can_focus)(GtkWidget *widget, gboolean can_focus);
-void (*p_gtk_widget_set_colormap)(GtkWidget *widget, GdkColormap *colormap);
-void (*p_gtk_widget_set_hexpand)(GtkWidget *widget, gboolean expand);
-void (*p_gtk_widget_set_sensitive)(GtkWidget *widget, gboolean sensitive);
-void (*p_gtk_widget_set_size_request)(GtkWidget *widget, gint width, gint height);
-void (*p_gtk_widget_set_vexpand)(GtkWidget *widget, gboolean expand);
-void (*p_gtk_widget_set_visual)(GtkWidget *widget, GdkVisual *visual);
-void (*p_gtk_widget_show)(GtkWidget *widget);
-void (*p_gtk_widget_show_all)(GtkWidget *widget);
-void (*p_gtk_widget_style_get)(GtkWidget *widget, const gchar *first_property_name, ...);
-void (*p_gtk_window_maximize)(GtkWindow *window);
-GtkWidget* (*p_gtk_window_new)(GtkWindowType type);
-gboolean (*p_gtk_window_parse_geometry)(GtkWindow *window, const gchar *geometry);
-void (*p_gtk_window_resize)(GtkWindow *window, gint width, gint height);
-gboolean (*p_gtk_window_resize_grip_is_visible)(GtkWindow *window);
-void (*p_gtk_window_set_decorated)(GtkWindow *window, gboolean setting);
-void (*p_gtk_window_set_focus)(GtkWindow *window, GtkWidget *focus);
-void (*p_gtk_window_set_has_resize_grip)(GtkWindow *window, gboolean value);
-gboolean (*p_gtk_window_set_icon_from_file)(GtkWindow *window, const gchar *filename, GError **err);
-void (*p_gtk_window_set_keep_above)(GtkWindow *window, gboolean setting);
-void (*p_gtk_window_set_keep_below)(GtkWindow *window, gboolean setting);
-void (*p_gtk_window_set_skip_pager_hint)(GtkWindow *window, gboolean setting);
-void (*p_gtk_window_set_skip_taskbar_hint)(GtkWindow *window, gboolean setting);
-void (*p_gtk_window_set_title)(GtkWindow *window, const gchar *title);
-void (*p_gtk_window_set_type_hint)(GtkWindow *window, GdkWindowTypeHint hint);
-void (*p_gtk_window_set_urgency_hint)(GtkWindow *window, gboolean setting);
-void (*p_gtk_window_set_wmclass)(GtkWindow *window, const gchar *wmclass_name, const gchar *wmclass_class);
-void (*p_gtk_window_unmaximize)(GtkWindow *window);
-AtkObject* (*p_vte_terminal_accessible_new)(VteTerminal *terminal);
-void (*p_vte_terminal_copy_clipboard)(VteTerminal *terminal);
-pid_t (*p_vte_terminal_fork_command)(VteTerminal *terminal, const char *command, char **argv, char **envv, const char *working_directory, gboolean lastlog, gboolean utmp, gboolean wtmp);
-gboolean (*p_vte_terminal_fork_command_full)(VteTerminal *terminal, VtePtyFlags pty_flags, const char *working_directory, char **argv, char **envv, GSpawnFlags spawn_flags, GSpawnChildSetupFunc child_setup, gpointer child_setup_data, GPid *child_pid, GError **error);
-GtkAdjustment* (*p_vte_terminal_get_adjustment)(VteTerminal *terminal);
-glong (*p_vte_terminal_get_char_height)(VteTerminal *terminal);
-glong (*p_vte_terminal_get_char_width)(VteTerminal *terminal);
-const char* (*p_vte_terminal_get_encoding)(VteTerminal *terminal);
-gboolean (*p_vte_terminal_get_has_selection)(VteTerminal *terminal);
-const char* (*p_vte_terminal_get_window_title)(VteTerminal *terminal);
-void (*p_vte_terminal_im_append_menuitems)(VteTerminal *terminal, GtkMenuShell *menushell);
-int (*p_vte_terminal_match_add_gregex)(VteTerminal *terminal, GRegex *regex, GRegexMatchFlags flags);
-char* (*p_vte_terminal_match_check)(VteTerminal *terminal, glong column, glong row, int *tag);
-GtkWidget* (*p_vte_terminal_new)(void);
-void (*p_vte_terminal_paste_clipboard)(VteTerminal *terminal);
-void (*p_vte_terminal_reset)(VteTerminal *terminal, gboolean clear_tabstops, gboolean clear_history);
-gboolean (*p_vte_terminal_search_find_next)(VteTerminal *terminal);
-gboolean (*p_vte_terminal_search_find_previous)(VteTerminal *terminal);
-void (*p_vte_terminal_search_set_gregex)(VteTerminal *terminal, GRegex *regex);
-void (*p_vte_terminal_search_set_wrap_around)(VteTerminal *terminal, gboolean wrap_around);
-void (*p_vte_terminal_select_all)(VteTerminal *terminal);
-void (*p_vte_terminal_set_allow_bold)(VteTerminal *terminal, gboolean allow_bold);
-void (*p_vte_terminal_set_audible_bell)(VteTerminal *terminal, gboolean is_audible);
-void (*p_vte_terminal_set_background_image_file)(VteTerminal *terminal, const char *path);
-void (*p_vte_terminal_set_background_saturation)(VteTerminal *terminal, double saturation);
-void (*p_vte_terminal_set_background_tint_color)(VteTerminal *terminal, const GdkColor *color);
-void (*p_vte_terminal_set_background_transparent)(VteTerminal *terminal, gboolean transparent);
-void (*p_vte_terminal_set_backspace_binding)(VteTerminal *terminal, VteTerminalEraseBinding binding);
-void (*p_vte_terminal_set_color_background)(VteTerminal *terminal, const GdkColor *background);
-void (*p_vte_terminal_set_color_bold)(VteTerminal *terminal, const GdkColor *bold);
-void (*p_vte_terminal_set_color_cursor)(VteTerminal *terminal, const GdkColor *cursor_background);
-void (*p_vte_terminal_set_color_dim)(VteTerminal *terminal, const GdkColor *dim);
-void (*p_vte_terminal_set_color_foreground)(VteTerminal *terminal, const GdkColor *foreground);
-void (*p_vte_terminal_set_color_highlight)(VteTerminal *terminal, const GdkColor *highlight_background);
-void (*p_vte_terminal_set_colors)(VteTerminal *terminal, const GdkColor *foreground, const GdkColor *background, const GdkColor *palette, glong palette_size);
-void (*p_vte_terminal_set_cursor_blink_mode)(VteTerminal *terminal, VteTerminalCursorBlinkMode mode);
-void (*p_vte_terminal_set_cursor_shape)(VteTerminal *terminal, VteTerminalCursorShape shape);
-void (*p_vte_terminal_set_default_colors)(VteTerminal *terminal);
-void (*p_vte_terminal_set_delete_binding)(VteTerminal *terminal, VteTerminalEraseBinding binding);
-void (*p_vte_terminal_set_emulation)(VteTerminal *terminal, const char *emulation);
-void (*p_vte_terminal_set_encoding)(VteTerminal *terminal, const char *codeset);
-void (*p_vte_terminal_set_font_from_string)(VteTerminal *terminal, const char *name);
-void (*p_vte_terminal_set_font_from_string_full)(VteTerminal *terminal, const char *name, VteTerminalAntiAlias antialias);
-void (*p_vte_terminal_set_mouse_autohide)(VteTerminal *terminal, gboolean setting);
-void (*p_vte_terminal_set_opacity)(VteTerminal *terminal, guint16 opacity);
-void (*p_vte_terminal_set_scroll_background)(VteTerminal *terminal, gboolean scroll);
-void (*p_vte_terminal_set_scroll_on_keystroke)(VteTerminal *terminal, gboolean scroll);
-void (*p_vte_terminal_set_scroll_on_output)(VteTerminal *terminal, gboolean scroll);
-void (*p_vte_terminal_set_scrollback_lines)(VteTerminal *terminal, glong lines);
-void (*p_vte_terminal_set_size)(VteTerminal *terminal, glong columns, glong rows);
-void (*p_vte_terminal_set_visible_bell)(VteTerminal *terminal, gboolean is_visible);
-void (*p_vte_terminal_set_word_chars)(VteTerminal *terminal, const char *spec);
-unsigned short with_gtk = 0;
-void *p_hdl_gtk = NULL;
-void *p_hdl_vte = NULL;
-bool has_resize_grip = 1;
-#endif
-
 #if CLOSE_DIALOG
 static GtkWidget* make_close_dialog(void)
 {
@@ -1867,12 +1434,7 @@ static bool menu_popup(GtkWidget *widget, GdkEventButton *event)
         if (menu_item_success == 1) {
           gtk_test_widget_send_key(menu, GDK_Down, 0);
           gtk_test_widget_send_key(menu, GDK_Return, 0);
-#ifdef RULE_THEM_ALL
-          if (with_gtk == 2)
-            gdk_display_warp_pointer(display, gdk_display_get_default_screen(display), event->x_root, event->y_root);
-          else
-#endif
-            gdk_device_warp(event->device, gdk_display_get_default_screen(display), event->x_root, event->y_root);
+          gdk_device_warp(event->device, gdk_display_get_default_screen(display), event->x_root, event->y_root);
         }
 #endif
 #ifdef MENU_MATCH_STRING_EXEC
@@ -1968,7 +1530,7 @@ static void add_tab(void)
 #if defined(HOTKEY_TAB_EDIT_LABEL) || defined(MENU_TAB_EDIT_LABEL)
   bool label_exist;
 #endif
-#if USE_ACCESSIBLE && defined(RULE_THEM_ALL)
+#if USE_ACCESSIBLE
   bool use_accessible;
 #endif
 #if !VTE_FORK_CMD_OLD
@@ -2008,9 +1570,6 @@ static void add_tab(void)
 #endif
 
   term->vte = vte_terminal_new();
-#ifdef RULE_THEM_ALL
-  if (with_gtk == 3)
-#endif
   {
     gtk_widget_set_hexpand(term->vte, TRUE);
     gtk_widget_set_vexpand(term->vte, TRUE);
@@ -2018,12 +1577,7 @@ static void add_tab(void)
 
 #ifdef SCROLLBAR
   term->hbox = gtk_hbox_new(FALSE, 0);
-#ifdef RULE_THEM_ALL
-  if (with_gtk == 2)
-    term->scrollbar = gtk_vscrollbar_new(vte_terminal_get_adjustment(VTE_TERMINAL(term->vte)));
-  else
-#endif
-    term->scrollbar = gtk_scrollbar_new(GTK_ORIENTATION_VERTICAL, gtk_scrollable_get_vadjustment(GTK_SCROLLABLE(term->vte)));
+  term->scrollbar = gtk_scrollbar_new(GTK_ORIENTATION_VERTICAL, gtk_scrollable_get_vadjustment(GTK_SCROLLABLE(term->vte)));
 #if !(SCROLLBAR & 1)
   gtk_box_pack_start(GTK_BOX(term->hbox), term->scrollbar, FALSE, FALSE, 0);
 #endif
@@ -2065,12 +1619,6 @@ static void add_tab(void)
 #endif
 
 #if USE_ACCESSIBLE
-#ifdef RULE_THEM_ALL
-  use_accessible = ((GTK_MAJOR_VERSION == 2) || VTE_CHECK_VERSION(0,29,0));
-  if (g_getenv("USE_ACCESSIBLE"))
-    use_accessible = strncmp(g_getenv("USE_ACCESSIBLE"), "0", 2);
-  if ((with_gtk == 3) && use_accessible)
-#endif
     vte_terminal_accessible_new(VTE_TERMINAL(term->vte));
 #endif
 
@@ -2241,11 +1789,8 @@ static void add_tab(void)
   vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), SCROLL_LINES);
 #endif
 
-#if defined(RULE_THEM_ALL) || !VTE_CHECK_VERSION(0,27,1) || !GTK_CHECK_VERSION(2,91,1)
+#if !VTE_CHECK_VERSION(0,27,1) || !GTK_CHECK_VERSION(2,91,1)
 #if VTE_COLUMNS && VTE_ROWS
-#ifdef RULE_THEM_ALL
-  if (with_gtk == 2)
-#endif
     vte_terminal_set_size(VTE_TERMINAL(term->vte), VTE_COLUMNS, VTE_ROWS);
 #endif
 #endif
@@ -2320,9 +1865,6 @@ static void add_tab(void)
 #endif
 
 #if VTE_CHECK_VERSION(0,27,1) && GTK_CHECK_VERSION(2,91,1) && defined(VTE_FUNNY)
-#ifdef RULE_THEM_ALL
-  if (with_gtk == 3)
-#endif
     gtk_widget_set_size_request(term->vte, VTE_COLUMNS * vte_terminal_get_char_width(VTE_TERMINAL(term->vte)) + INNER_BORDER_W, VTE_ROWS * vte_terminal_get_char_height(VTE_TERMINAL(term->vte)) + INNER_BORDER_H);
 #endif
 
@@ -2471,11 +2013,6 @@ static void do_menu_saturation(void)
   else
 #endif
     dialog = gtk_dialog_new_with_buttons(LABEL_MENU_SATURATION, GTK_WINDOW(main_window), GTK_DIALOG_DESTROY_WITH_PARENT, GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL, GTK_STOCK_OK, GTK_RESPONSE_OK, NULL);
-#ifdef RULE_THEM_ALL
-  if (with_gtk == 2)
-    adjustment = gtk_hscale_new_with_range(0.0, 1.0, 0.01);
-  else
-#endif
     adjustment = gtk_scale_new_with_range(GTK_ORIENTATION_HORIZONTAL, 0.0, 1.0, 0.01);
   gtk_range_set_value(GTK_RANGE(adjustment), saturation_level_old);
   g_signal_connect_after(adjustment, "change-value", do_change_saturation, NULL);
@@ -2492,19 +2029,19 @@ static void do_menu_saturation(void)
 static void do_menu_tint_color(void)
 {
   GtkWidget *color_tint_dialog = gtk_color_selection_dialog_new(LABEL_DIALOG_BACKGROUND_TINT);
-#if defined(RULE_THEM_ALL) || !GTK_CHECK_VERSION(3,3,8)
+#if !GTK_CHECK_VERSION(3,3,8)
   gtk_color_selection_set_current_color(GTK_COLOR_SELECTION(gtk_color_selection_dialog_get_color_selection(GTK_COLOR_SELECTION_DIALOG(color_tint_dialog))), &color_tint);
 #endif
-#if !defined(RULE_THEM_ALL) && GTK_CHECK_VERSION(3,3,8)
+#if GTK_CHECK_VERSION(3,3,8)
   GdkRGBA rgba_tint;
   gdk_rgba_parse(&rgba_tint, gdk_color_to_string(&color_tint));
   gtk_color_selection_set_current_rgba(GTK_COLOR_SELECTION(gtk_color_selection_dialog_get_color_selection(GTK_COLOR_SELECTION_DIALOG(color_tint_dialog))), &rgba_tint);
 #endif
   if (GTK_RESPONSE_OK == gtk_dialog_run(GTK_DIALOG(color_tint_dialog))) {
-#if defined(RULE_THEM_ALL) || !GTK_CHECK_VERSION(3,3,8)
+#if !GTK_CHECK_VERSION(3,3,8)
     gtk_color_selection_get_current_color(GTK_COLOR_SELECTION(gtk_color_selection_dialog_get_color_selection(GTK_COLOR_SELECTION_DIALOG(color_tint_dialog))), &color_tint);
 #endif
-#if !defined(RULE_THEM_ALL) && GTK_CHECK_VERSION(3,3,8)
+#if GTK_CHECK_VERSION(3,3,8)
     gtk_color_selection_get_current_rgba(GTK_COLOR_SELECTION(gtk_color_selection_dialog_get_color_selection(GTK_COLOR_SELECTION_DIALOG(color_tint_dialog))), &rgba_tint);
     color_tint.red = rgba_tint.red * 65535;
     color_tint.green = rgba_tint.green * 65535;
@@ -2547,9 +2084,6 @@ static void do_zoom_routine(void)
     GET_CURRENT_TAB(i);
     vte_terminal_set_font_from_string(VTE_TERMINAL(term->vte), font_str);
 #ifdef VTE_FUNNY
-#ifdef RULE_THEM_ALL
-    if (with_gtk == 3)
-#endif
       gtk_widget_set_size_request(term->vte, VTE_COLUMNS * vte_terminal_get_char_width(VTE_TERMINAL(term->vte)) + INNER_BORDER_W, VTE_ROWS * vte_terminal_get_char_height(VTE_TERMINAL(term->vte)) + INNER_BORDER_H);
 #endif
   }
@@ -2651,17 +2185,11 @@ static void do_toggle_decorated(void)
 #endif
 #if defined(HOTKEY_TOGGLE_STATUS_BAR) || defined(MENU_TOGGLE_STATUS_BAR)
   if (status_bar_status) {
-#ifdef RULE_THEM_ALL
-    if (has_resize_grip)
-#endif
     {
       gtk_window_set_has_resize_grip(GTK_WINDOW(main_window), status_bar_resize_grip);
     }
   } else {
     gtk_widget_hide(statusbar);
-#ifdef RULE_THEM_ALL
-    if (has_resize_grip)
-#endif
     {
       gtk_window_set_has_resize_grip(GTK_WINDOW(main_window), FALSE);
     }
@@ -2699,17 +2227,11 @@ static void do_toggle_status_bar(void)
   status_bar_status ^= 1;
   if (status_bar_status) {
     gtk_widget_show(statusbar);
-#ifdef RULE_THEM_ALL
-    if (has_resize_grip)
-#endif
     {
       gtk_window_set_has_resize_grip(GTK_WINDOW(main_window), status_bar_resize_grip);
     }
   } else {
     gtk_widget_hide(statusbar);
-#ifdef RULE_THEM_ALL
-    if (has_resize_grip)
-#endif
     {
       gtk_window_set_has_resize_grip(GTK_WINDOW(main_window), FALSE);
     }
@@ -3334,7 +2856,7 @@ bool at_dock_mode = FALSE;
 #if COMMAND_EXEC_PROGRAM || COMMAND_TAB_NUMBERS || defined(MENU_ENCODING_LIST)
   int i = 0;
 #endif
-#if COMMAND_AT_ROOT_WINDOW || COMMAND_DOCK_MODE || COMMAND_FULLSCREEN || COMMAND_LOGIN_SHELL || PROGRAM_WM_CLASS || COMMAND_SET_TITLE || COMMAND_FONT || COMMAND_COLOR_FG || COMMAND_COLOR_BG || COMMAND_SATURATION || COMMAND_GEOMETRY || COMMAND_SHOW_HELP || COMMAND_SHOW_OPTIONS || COMMAND_SHOW_VERSION || COMMAND_TAB_NUMBERS || defined(RULE_THEM_ALL) || defined(MENU_CUSTOM)
+#if COMMAND_AT_ROOT_WINDOW || COMMAND_DOCK_MODE || COMMAND_FULLSCREEN || COMMAND_LOGIN_SHELL || PROGRAM_WM_CLASS || COMMAND_SET_TITLE || COMMAND_FONT || COMMAND_COLOR_FG || COMMAND_COLOR_BG || COMMAND_SATURATION || COMMAND_GEOMETRY || COMMAND_SHOW_HELP || COMMAND_SHOW_OPTIONS || COMMAND_SHOW_VERSION || COMMAND_TAB_NUMBERS || defined(MENU_CUSTOM)
   int j = 0;
 #endif
 
@@ -3375,7 +2897,7 @@ bool at_dock_mode = FALSE;
   i = 1;
 #endif
 
-#if COMMAND_AT_ROOT_WINDOW || COMMAND_DOCK_MODE || COMMAND_LOGIN_SHELL || PROGRAM_WM_CLASS || COMMAND_SET_TITLE || COMMAND_FONT || COMMAND_COLOR_FG || COMMAND_COLOR_BG || COMMAND_SATURATION || COMMAND_GEOMETRY || COMMAND_SHOW_HELP || COMMAND_SHOW_OPTIONS || COMMAND_SHOW_VERSION || COMMAND_TAB_NUMBERS || defined(RULE_THEM_ALL)
+#if COMMAND_AT_ROOT_WINDOW || COMMAND_DOCK_MODE || COMMAND_LOGIN_SHELL || PROGRAM_WM_CLASS || COMMAND_SET_TITLE || COMMAND_FONT || COMMAND_COLOR_FG || COMMAND_COLOR_BG || COMMAND_SATURATION || COMMAND_GEOMETRY || COMMAND_SHOW_HELP || COMMAND_SHOW_OPTIONS || COMMAND_SHOW_VERSION || COMMAND_TAB_NUMBERS
   j = 1;
   while ((j < argc) && strncmp(argv[j], "-e", 3)) {
 #if PROGRAM_WM_CLASS
@@ -3482,9 +3004,6 @@ bool at_dock_mode = FALSE;
       printf("\t-2 to -9              \tspecify the initial tab numbers\n");
 #endif
       printf("\nGTK+ Options:\n");
-#ifdef RULE_THEM_ALL
-      printf("\t--2                   \tspecify GTK+ 2.x as GUI\n\t--3                   \tspecify GTK+ 3.x as GUI\n");
-#endif
       printf("\t--class [string]      \tspecify WM_CLASS class\n\t--name [string]       \tspecify WM_CLASS name\n");
 #ifdef BACKGROUND_IMAGE
       printf("\nBackground image:\n\t$HOME/%s\n", BACKGROUND_IMAGE);
@@ -3492,13 +3011,6 @@ bool at_dock_mode = FALSE;
       printf("\n");
       return FALSE;
     }
-#endif
-
-#ifdef RULE_THEM_ALL
-    if (!strncmp(argv[j], "--2", 4))
-      with_gtk = 2;
-    if (!strncmp(argv[j], "--3", 4))
-      with_gtk = 3;
 #endif
 
 #if COMMAND_LOGIN_SHELL
@@ -3537,7 +3049,7 @@ bool at_dock_mode = FALSE;
 
     j++;
   }
-#endif /* COMMAND_AT_ROOT_WINDOW || COMMAND_DOCK_MODE || COMMAND_LOGIN_SHELL || PROGRAM_WM_CLASS || COMMAND_SET_TITLE || COMMAND_FONT || COMMAND_COLOR_FG || COMMAND_COLOR_BG || COMMAND_SATURATION || COMMAND_GEOMETRY || COMMAND_SHOW_HELP || COMMAND_SHOW_OPTIONS || COMMAND_SHOW_VERSION || COMMAND_TAB_NUMBERS || defined(RULE_THEM_ALL) */
+#endif /* COMMAND_AT_ROOT_WINDOW || COMMAND_DOCK_MODE || COMMAND_LOGIN_SHELL || PROGRAM_WM_CLASS || COMMAND_SET_TITLE || COMMAND_FONT || COMMAND_COLOR_FG || COMMAND_COLOR_BG || COMMAND_SATURATION || COMMAND_GEOMETRY || COMMAND_SHOW_HELP || COMMAND_SHOW_OPTIONS || COMMAND_SHOW_VERSION || COMMAND_TAB_NUMBERS */
 
 #ifdef BACKGROUND_IMAGE
   g_snprintf(imgstr, sizeof(imgstr), "%s/%s", g_getenv("HOME"), BACKGROUND_IMAGE);
@@ -3561,238 +3073,8 @@ bool at_dock_mode = FALSE;
 #endif
 #endif
 
-#ifdef RULE_THEM_ALL
-  if (with_gtk == 2) {
-    if (!GET_VTE_TWO || !GET_GTK_TWO)
-      with_gtk = 4;
-  }
-
-  if (with_gtk == 3) {
-    if (!GET_VTE_THREE || !GET_GTK_THREE)
-      with_gtk = 4;
-  }
-
-  if (with_gtk == 0) {
-    with_gtk = 4;
-#if (GTK_MAJOR_VERSION == 2)
-    if (GET_VTE_TWO && GET_GTK_TWO)
-      with_gtk = 2;
-    else {
-      if (GET_VTE_THREE && GET_GTK_THREE)
-        with_gtk = 3;
-    }
-#endif
-#if (GTK_MAJOR_VERSION == 3)
-    if (GET_VTE_THREE && GET_GTK_THREE)
-      with_gtk = 3;
-    else {
-      if (GET_VTE_TWO && GET_GTK_TWO)
-        with_gtk = 2;
-    }
-#endif
-  }
-
-  if (with_gtk == 4) {
-    printf("Failed to load VTE/GTK+ runtime.\n");
-    return -1;
-  }
-
-  *(void **)(&p_gdk_color_parse) = dlsym(p_hdl_gtk, "gdk_color_parse");
-  *(void **)(&p_gdk_display_get_default) = dlsym(p_hdl_gtk, "gdk_display_get_default");
-  *(void **)(&p_gdk_display_get_default_screen) = dlsym(p_hdl_gtk, "gdk_display_get_default_screen");
-  *(void **)(&p_gdk_window_get_display) = dlsym(p_hdl_gtk, "gdk_window_get_display");
-  *(void **)(&p_gtk_box_pack_start) = dlsym(p_hdl_gtk, "gtk_box_pack_start");
-  *(void **)(&p_gtk_button_new) = dlsym(p_hdl_gtk, "gtk_button_new");
-  *(void **)(&p_gtk_button_set_focus_on_click) = dlsym(p_hdl_gtk, "gtk_button_set_focus_on_click");
-  *(void **)(&p_gtk_button_set_image) = dlsym(p_hdl_gtk, "gtk_button_set_image");
-  *(void **)(&p_gtk_button_set_relief) = dlsym(p_hdl_gtk, "gtk_button_set_relief");
-  *(void **)(&p_gtk_clipboard_get) = dlsym(p_hdl_gtk, "gtk_clipboard_get");
-  *(void **)(&p_gtk_clipboard_get_for_display) = dlsym(p_hdl_gtk, "gtk_clipboard_get_for_display");
-  *(void **)(&p_gtk_clipboard_set_text) = dlsym(p_hdl_gtk, "gtk_clipboard_set_text");
-  *(void **)(&p_gtk_clipboard_wait_is_text_available) = dlsym(p_hdl_gtk, "gtk_clipboard_wait_is_text_available");
-  *(void **)(&p_gtk_color_selection_dialog_get_color_selection) = dlsym(p_hdl_gtk, "gtk_color_selection_dialog_get_color_selection");
-  *(void **)(&p_gtk_color_selection_dialog_new) = dlsym(p_hdl_gtk, "gtk_color_selection_dialog_new");
-  *(void **)(&p_gtk_color_selection_get_current_color) = dlsym(p_hdl_gtk, "gtk_color_selection_get_current_color");
-  *(void **)(&p_gtk_color_selection_set_current_color) = dlsym(p_hdl_gtk, "gtk_color_selection_set_current_color");
-  *(void **)(&p_gtk_container_add) = dlsym(p_hdl_gtk, "gtk_container_add");
-  *(void **)(&p_gtk_container_child_set) = dlsym(p_hdl_gtk, "gtk_container_child_set");
-  *(void **)(&p_gtk_dialog_get_content_area) = dlsym(p_hdl_gtk, "gtk_dialog_get_content_area");
-  *(void **)(&p_gtk_dialog_new_with_buttons) = dlsym(p_hdl_gtk, "gtk_dialog_new_with_buttons");
-  *(void **)(&p_gtk_dialog_run) = dlsym(p_hdl_gtk, "gtk_dialog_run");
-  *(void **)(&p_gtk_dialog_set_default_response) = dlsym(p_hdl_gtk, "gtk_dialog_set_default_response");
-  *(void **)(&p_gtk_entry_get_text) = dlsym(p_hdl_gtk, "gtk_entry_get_text");
-  *(void **)(&p_gtk_entry_new) = dlsym(p_hdl_gtk, "gtk_entry_new");
-  *(void **)(&p_gtk_entry_set_activates_default) = dlsym(p_hdl_gtk, "gtk_entry_set_activates_default");
-  *(void **)(&p_gtk_entry_set_text) = dlsym(p_hdl_gtk, "gtk_entry_set_text");
-  *(void **)(&p_gtk_font_selection_dialog_get_font_name) = dlsym(p_hdl_gtk, "gtk_font_selection_dialog_get_font_name");
-  *(void **)(&p_gtk_font_selection_dialog_new) = dlsym(p_hdl_gtk, "gtk_font_selection_dialog_new");
-  *(void **)(&p_gtk_font_selection_dialog_set_font_name) = dlsym(p_hdl_gtk, "gtk_font_selection_dialog_set_font_name");
-  *(void **)(&p_gtk_hbox_new) = dlsym(p_hdl_gtk, "gtk_hbox_new");
-  *(void **)(&p_gtk_image_menu_item_new_from_stock) = dlsym(p_hdl_gtk, "gtk_image_menu_item_new_from_stock");
-  *(void **)(&p_gtk_image_menu_item_new_with_label) = dlsym(p_hdl_gtk, "gtk_image_menu_item_new_with_label");
-  *(void **)(&p_gtk_image_menu_item_new_with_mnemonic) = dlsym(p_hdl_gtk, "gtk_image_menu_item_new_with_mnemonic");
-  *(void **)(&p_gtk_image_menu_item_set_image) = dlsym(p_hdl_gtk, "gtk_image_menu_item_set_image");
-  *(void **)(&p_gtk_image_new_from_stock) = dlsym(p_hdl_gtk, "gtk_image_new_from_stock");
-  *(void **)(&p_gtk_init) = dlsym(p_hdl_gtk, "gtk_init");
-  *(void **)(&p_gtk_label_get_text) = dlsym(p_hdl_gtk, "gtk_label_get_text");
-  *(void **)(&p_gtk_label_new) = dlsym(p_hdl_gtk, "gtk_label_new");
-  *(void **)(&p_gtk_main) = dlsym(p_hdl_gtk, "gtk_main");
-  *(void **)(&p_gtk_main_quit) = dlsym(p_hdl_gtk, "gtk_main_quit");
-  *(void **)(&p_gtk_menu_item_new_with_label) = dlsym(p_hdl_gtk, "gtk_menu_item_new_with_label");
-  *(void **)(&p_gtk_menu_item_new_with_mnemonic) = dlsym(p_hdl_gtk, "gtk_menu_item_new_with_mnemonic");
-  *(void **)(&p_gtk_menu_item_set_submenu) = dlsym(p_hdl_gtk, "gtk_menu_item_set_submenu");
-  *(void **)(&p_gtk_menu_new) = dlsym(p_hdl_gtk, "gtk_menu_new");
-  *(void **)(&p_gtk_menu_popup) = dlsym(p_hdl_gtk, "gtk_menu_popup");
-  *(void **)(&p_gtk_menu_shell_append) = dlsym(p_hdl_gtk, "gtk_menu_shell_append");
-  *(void **)(&p_gtk_menu_shell_prepend) = dlsym(p_hdl_gtk, "gtk_menu_shell_prepend");
-  *(void **)(&p_gtk_notebook_append_page) = dlsym(p_hdl_gtk, "gtk_notebook_append_page");
-  *(void **)(&p_gtk_notebook_get_current_page) = dlsym(p_hdl_gtk, "gtk_notebook_get_current_page");
-  *(void **)(&p_gtk_notebook_get_n_pages) = dlsym(p_hdl_gtk, "gtk_notebook_get_n_pages");
-  *(void **)(&p_gtk_notebook_get_nth_page) = dlsym(p_hdl_gtk, "gtk_notebook_get_nth_page");
-  *(void **)(&p_gtk_notebook_get_show_tabs) = dlsym(p_hdl_gtk, "gtk_notebook_get_show_tabs");
-  *(void **)(&p_gtk_notebook_get_tab_label) = dlsym(p_hdl_gtk, "gtk_notebook_get_tab_label");
-  *(void **)(&p_gtk_notebook_new) = dlsym(p_hdl_gtk, "gtk_notebook_new");
-  *(void **)(&p_gtk_notebook_popup_enable) = dlsym(p_hdl_gtk, "gtk_notebook_popup_enable");
-  *(void **)(&p_gtk_notebook_prepend_page) = dlsym(p_hdl_gtk, "gtk_notebook_prepend_page");
-  *(void **)(&p_gtk_notebook_remove_page) = dlsym(p_hdl_gtk, "gtk_notebook_remove_page");
-  *(void **)(&p_gtk_notebook_set_current_page) = dlsym(p_hdl_gtk, "gtk_notebook_set_current_page");
-  *(void **)(&p_gtk_notebook_set_scrollable) = dlsym(p_hdl_gtk, "gtk_notebook_set_scrollable");
-  *(void **)(&p_gtk_notebook_set_show_border) = dlsym(p_hdl_gtk, "gtk_notebook_set_show_border");
-  *(void **)(&p_gtk_notebook_set_show_tabs) = dlsym(p_hdl_gtk, "gtk_notebook_set_show_tabs");
-  *(void **)(&p_gtk_notebook_set_tab_label) = dlsym(p_hdl_gtk, "gtk_notebook_set_tab_label");
-  *(void **)(&p_gtk_notebook_set_tab_label_text) = dlsym(p_hdl_gtk, "gtk_notebook_set_tab_label_text");
-  *(void **)(&p_gtk_notebook_set_tab_pos) = dlsym(p_hdl_gtk, "gtk_notebook_set_tab_pos");
-  *(void **)(&p_gtk_notebook_set_tab_reorderable) = dlsym(p_hdl_gtk, "gtk_notebook_set_tab_reorderable");
-  *(void **)(&p_gtk_range_get_value) = dlsym(p_hdl_gtk, "gtk_range_get_value");
-  *(void **)(&p_gtk_range_set_value) = dlsym(p_hdl_gtk, "gtk_range_set_value");
-  *(void **)(&p_gtk_separator_menu_item_new) = dlsym(p_hdl_gtk, "gtk_separator_menu_item_new");
-  *(void **)(&p_gtk_settings_get_default) = dlsym(p_hdl_gtk, "gtk_settings_get_default");
-  *(void **)(&p_gtk_statusbar_new) = dlsym(p_hdl_gtk, "gtk_statusbar_new");
-  *(void **)(&p_gtk_statusbar_push) = dlsym(p_hdl_gtk, "gtk_statusbar_push");
-  *(void **)(&p_gtk_test_widget_click) = dlsym(p_hdl_gtk, "gtk_test_widget_click");
-  *(void **)(&p_gtk_test_widget_send_key) = dlsym(p_hdl_gtk, "gtk_test_widget_send_key");
-  *(void **)(&p_gtk_vbox_new) = dlsym(p_hdl_gtk, "gtk_vbox_new");
-  *(void **)(&p_gtk_widget_destroy) = dlsym(p_hdl_gtk, "gtk_widget_destroy");
-  *(void **)(&p_gtk_widget_get_screen) = dlsym(p_hdl_gtk, "gtk_widget_get_screen");
-  *(void **)(&p_gtk_widget_get_window) = dlsym(p_hdl_gtk, "gtk_widget_get_window");
-  *(void **)(&p_gtk_widget_hide) = dlsym(p_hdl_gtk, "gtk_widget_hide");
-  *(void **)(&p_gtk_widget_realize) = dlsym(p_hdl_gtk, "gtk_widget_realize");
-  *(void **)(&p_gtk_widget_set_can_focus) = dlsym(p_hdl_gtk, "gtk_widget_set_can_focus");
-  *(void **)(&p_gtk_widget_set_sensitive) = dlsym(p_hdl_gtk, "gtk_widget_set_sensitive");
-  *(void **)(&p_gtk_widget_show) = dlsym(p_hdl_gtk, "gtk_widget_show");
-  *(void **)(&p_gtk_widget_show_all) = dlsym(p_hdl_gtk, "gtk_widget_show_all");
-  *(void **)(&p_gtk_window_maximize) = dlsym(p_hdl_gtk, "gtk_window_maximize");
-  *(void **)(&p_gtk_window_new) = dlsym(p_hdl_gtk, "gtk_window_new");
-  *(void **)(&p_gtk_window_parse_geometry) = dlsym(p_hdl_gtk, "gtk_window_parse_geometry");
-  *(void **)(&p_gtk_window_resize) = dlsym(p_hdl_gtk, "gtk_window_resize");
-  *(void **)(&p_gtk_window_resize_grip_is_visible) = dlsym(p_hdl_gtk, "gtk_window_resize_grip_is_visible");
-  if (dlerror() != NULL)
-    has_resize_grip = 0;
-  *(void **)(&p_gtk_window_set_has_resize_grip) = dlsym(p_hdl_gtk, "gtk_window_set_has_resize_grip");
-  if (dlerror() != NULL)
-    has_resize_grip = 0;
-  *(void **)(&p_gtk_window_set_decorated) = dlsym(p_hdl_gtk, "gtk_window_set_decorated");
-  *(void **)(&p_gtk_window_set_focus) = dlsym(p_hdl_gtk, "gtk_window_set_focus");
-  *(void **)(&p_gtk_window_set_icon_from_file) = dlsym(p_hdl_gtk, "gtk_window_set_icon_from_file");
-  *(void **)(&p_gtk_window_set_keep_above) = dlsym(p_hdl_gtk, "gtk_window_set_keep_above");
-  *(void **)(&p_gtk_window_set_keep_below) = dlsym(p_hdl_gtk, "gtk_window_set_keep_below");
-  *(void **)(&p_gtk_window_set_skip_pager_hint) = dlsym(p_hdl_gtk, "gtk_window_set_skip_pager_hint");
-  *(void **)(&p_gtk_window_set_skip_taskbar_hint) = dlsym(p_hdl_gtk, "gtk_window_set_skip_taskbar_hint");
-  *(void **)(&p_gtk_window_set_title) = dlsym(p_hdl_gtk, "gtk_window_set_title");
-  *(void **)(&p_gtk_window_set_type_hint) = dlsym(p_hdl_gtk, "gtk_window_set_type_hint");
-  *(void **)(&p_gtk_window_set_urgency_hint) = dlsym(p_hdl_gtk, "gtk_window_set_urgency_hint");
-  *(void **)(&p_gtk_window_set_wmclass) = dlsym(p_hdl_gtk, "gtk_window_set_wmclass");
-  *(void **)(&p_gtk_window_unmaximize) = dlsym(p_hdl_gtk, "gtk_window_unmaximize");
-  *(void **)(&p_vte_terminal_copy_clipboard) = dlsym(p_hdl_vte, "vte_terminal_copy_clipboard");
-  *(void **)(&p_vte_terminal_fork_command) = dlsym(p_hdl_vte, "vte_terminal_fork_command");
-  *(void **)(&p_vte_terminal_fork_command_full) = dlsym(p_hdl_vte, "vte_terminal_fork_command_full");
-  *(void **)(&p_vte_terminal_get_char_height) = dlsym(p_hdl_vte, "vte_terminal_get_char_height");
-  *(void **)(&p_vte_terminal_get_char_width) = dlsym(p_hdl_vte, "vte_terminal_get_char_width");
-  *(void **)(&p_vte_terminal_get_encoding) = dlsym(p_hdl_vte, "vte_terminal_get_encoding");
-  *(void **)(&p_vte_terminal_get_has_selection) = dlsym(p_hdl_vte, "vte_terminal_get_has_selection");
-  *(void **)(&p_vte_terminal_get_window_title) = dlsym(p_hdl_vte, "vte_terminal_get_window_title");
-  *(void **)(&p_vte_terminal_im_append_menuitems) = dlsym(p_hdl_vte, "vte_terminal_im_append_menuitems");
-  *(void **)(&p_vte_terminal_match_add_gregex) = dlsym(p_hdl_vte, "vte_terminal_match_add_gregex");
-  *(void **)(&p_vte_terminal_match_check) = dlsym(p_hdl_vte, "vte_terminal_match_check");
-  *(void **)(&p_vte_terminal_new) = dlsym(p_hdl_vte, "vte_terminal_new");
-  *(void **)(&p_vte_terminal_paste_clipboard) = dlsym(p_hdl_vte, "vte_terminal_paste_clipboard");
-  *(void **)(&p_vte_terminal_reset) = dlsym(p_hdl_vte, "vte_terminal_reset");
-  *(void **)(&p_vte_terminal_search_find_next) = dlsym(p_hdl_vte, "vte_terminal_search_find_next");
-  *(void **)(&p_vte_terminal_search_find_previous) = dlsym(p_hdl_vte, "vte_terminal_search_find_previous");
-  *(void **)(&p_vte_terminal_search_set_gregex) = dlsym(p_hdl_vte, "vte_terminal_search_set_gregex");
-  *(void **)(&p_vte_terminal_search_set_wrap_around) = dlsym(p_hdl_vte, "vte_terminal_search_set_wrap_around");
-  *(void **)(&p_vte_terminal_select_all) = dlsym(p_hdl_vte, "vte_terminal_select_all");
-  *(void **)(&p_vte_terminal_set_allow_bold) = dlsym(p_hdl_vte, "vte_terminal_set_allow_bold");
-  *(void **)(&p_vte_terminal_set_audible_bell) = dlsym(p_hdl_vte, "vte_terminal_set_audible_bell");
-  *(void **)(&p_vte_terminal_set_background_image_file) = dlsym(p_hdl_vte, "vte_terminal_set_background_image_file");
-  *(void **)(&p_vte_terminal_set_background_saturation) = dlsym(p_hdl_vte, "vte_terminal_set_background_saturation");
-  *(void **)(&p_vte_terminal_set_background_tint_color) = dlsym(p_hdl_vte, "vte_terminal_set_background_tint_color");
-  *(void **)(&p_vte_terminal_set_background_transparent) = dlsym(p_hdl_vte, "vte_terminal_set_background_transparent");
-  *(void **)(&p_vte_terminal_set_backspace_binding) = dlsym(p_hdl_vte, "vte_terminal_set_backspace_binding");
-  *(void **)(&p_vte_terminal_set_color_background) = dlsym(p_hdl_vte, "vte_terminal_set_color_background");
-  *(void **)(&p_vte_terminal_set_color_bold) = dlsym(p_hdl_vte, "vte_terminal_set_color_bold");
-  *(void **)(&p_vte_terminal_set_color_cursor) = dlsym(p_hdl_vte, "vte_terminal_set_color_cursor");
-  *(void **)(&p_vte_terminal_set_color_dim) = dlsym(p_hdl_vte, "vte_terminal_set_color_dim");
-  *(void **)(&p_vte_terminal_set_color_foreground) = dlsym(p_hdl_vte, "vte_terminal_set_color_foreground");
-  *(void **)(&p_vte_terminal_set_color_highlight) = dlsym(p_hdl_vte, "vte_terminal_set_color_highlight");
-  *(void **)(&p_vte_terminal_set_colors) = dlsym(p_hdl_vte, "vte_terminal_set_colors");
-  *(void **)(&p_vte_terminal_set_cursor_blink_mode) = dlsym(p_hdl_vte, "vte_terminal_set_cursor_blink_mode");
-  *(void **)(&p_vte_terminal_set_cursor_shape) = dlsym(p_hdl_vte, "vte_terminal_set_cursor_shape");
-  *(void **)(&p_vte_terminal_set_default_colors) = dlsym(p_hdl_vte, "vte_terminal_set_default_colors");
-  *(void **)(&p_vte_terminal_set_delete_binding) = dlsym(p_hdl_vte, "vte_terminal_set_delete_binding");
-  *(void **)(&p_vte_terminal_set_emulation) = dlsym(p_hdl_vte, "vte_terminal_set_emulation");
-  *(void **)(&p_vte_terminal_set_encoding) = dlsym(p_hdl_vte, "vte_terminal_set_encoding");
-  *(void **)(&p_vte_terminal_set_font_from_string) = dlsym(p_hdl_vte, "vte_terminal_set_font_from_string");
-  *(void **)(&p_vte_terminal_set_font_from_string_full) = dlsym(p_hdl_vte, "vte_terminal_set_font_from_string_full");
-  *(void **)(&p_vte_terminal_set_mouse_autohide) = dlsym(p_hdl_vte, "vte_terminal_set_mouse_autohide");
-  *(void **)(&p_vte_terminal_set_opacity) = dlsym(p_hdl_vte, "vte_terminal_set_opacity");
-  *(void **)(&p_vte_terminal_set_scroll_background) = dlsym(p_hdl_vte, "vte_terminal_set_scroll_background");
-  *(void **)(&p_vte_terminal_set_scroll_on_keystroke) = dlsym(p_hdl_vte, "vte_terminal_set_scroll_on_keystroke");
-  *(void **)(&p_vte_terminal_set_scroll_on_output) = dlsym(p_hdl_vte, "vte_terminal_set_scroll_on_output");
-  *(void **)(&p_vte_terminal_set_scrollback_lines) = dlsym(p_hdl_vte, "vte_terminal_set_scrollback_lines");
-  *(void **)(&p_vte_terminal_set_visible_bell) = dlsym(p_hdl_vte, "vte_terminal_set_visible_bell");
-  *(void **)(&p_vte_terminal_set_word_chars) = dlsym(p_hdl_vte, "vte_terminal_set_word_chars");
-
-  if (with_gtk == 2) {
-    *(void **)(&p_gdk_display_warp_pointer) = dlsym(p_hdl_gtk, "gdk_display_warp_pointer");
-    *(void **)(&p_gdk_screen_get_rgba_colormap) = dlsym(p_hdl_gtk, "gdk_screen_get_rgba_colormap");
-    *(void **)(&p_gdk_x11_drawable_get_xid) = dlsym(p_hdl_gtk, "gdk_x11_drawable_get_xid");
-    *(void **)(&p_gtk_hscale_new_with_range) = dlsym(p_hdl_gtk, "gtk_hscale_new_with_range");
-    *(void **)(&p_gtk_notebook_set_tab_border) = dlsym(p_hdl_gtk, "gtk_notebook_set_tab_border");
-    *(void **)(&p_gtk_notebook_set_tab_hborder) = dlsym(p_hdl_gtk, "gtk_notebook_set_tab_hborder");
-    *(void **)(&p_gtk_notebook_set_tab_vborder) = dlsym(p_hdl_gtk, "gtk_notebook_set_tab_vborder");
-    *(void **)(&p_gtk_rc_parse_string) = dlsym(p_hdl_gtk, "gtk_rc_parse_string");
-    *(void **)(&p_gtk_vscrollbar_new) = dlsym(p_hdl_gtk, "gtk_vscrollbar_new");
-    *(void **)(&p_gtk_widget_set_colormap) = dlsym(p_hdl_gtk, "gtk_widget_set_colormap");
-    *(void **)(&p_vte_terminal_get_adjustment) = dlsym(p_hdl_vte, "vte_terminal_get_adjustment");
-    *(void **)(&p_vte_terminal_set_size) = dlsym(p_hdl_vte, "vte_terminal_set_size");
-  }
-
-  if (with_gtk == 3) {
-    *(void **)(&p_gdk_device_warp) = dlsym(p_hdl_gtk, "gdk_device_warp");
-    *(void **)(&p_gdk_disable_multidevice) = dlsym(p_hdl_gtk, "gdk_disable_multidevice");
-    *(void **)(&p_gdk_screen_get_rgba_visual) = dlsym(p_hdl_gtk, "gdk_screen_get_rgba_visual");
-    *(void **)(&p_gdk_x11_window_get_xid) = dlsym(p_hdl_gtk, "gdk_x11_window_get_xid");
-    *(void **)(&p_gtk_css_provider_load_from_data) = dlsym(p_hdl_gtk, "gtk_css_provider_load_from_data");
-    *(void **)(&p_gtk_css_provider_new) = dlsym(p_hdl_gtk, "gtk_css_provider_new");
-    *(void **)(&p_gtk_scale_new_with_range) = dlsym(p_hdl_gtk, "gtk_scale_new_with_range");
-    *(void **)(&p_gtk_scrollable_get_vadjustment) = dlsym(p_hdl_gtk, "gtk_scrollable_get_vadjustment");
-    *(void **)(&p_gtk_scrollbar_new) = dlsym(p_hdl_gtk, "gtk_scrollbar_new");
-    *(void **)(&p_gtk_style_context_add_provider_for_screen) = dlsym(p_hdl_gtk, "gtk_style_context_add_provider_for_screen");
-    *(void **)(&p_gtk_widget_set_hexpand) = dlsym(p_hdl_gtk, "gtk_widget_set_hexpand");
-    *(void **)(&p_gtk_widget_set_size_request) = dlsym(p_hdl_gtk, "gtk_widget_set_size_request");
-    *(void **)(&p_gtk_widget_set_vexpand) = dlsym(p_hdl_gtk, "gtk_widget_set_vexpand");
-    *(void **)(&p_gtk_widget_set_visual) = dlsym(p_hdl_gtk, "gtk_widget_set_visual");
-    *(void **)(&p_gtk_widget_style_get) = dlsym(p_hdl_gtk, "gtk_widget_style_get");
-    *(void **)(&p_vte_terminal_accessible_new) = dlsym(p_hdl_vte, "vte_terminal_accessible_new");
-  }
-#endif
-
-#if defined(RULE_THEM_ALL) || GTK_CHECK_VERSION(2,91,7)
+#if GTK_CHECK_VERSION(2,91,7)
 #if defined(HOTKEY_MIMIC_SCROLL_UP) || defined(HOTKEY_MIMIC_SCROLL_DOWN) || defined(ONLY_ONE_MENU_ITEM)
-#ifdef RULE_THEM_ALL
-  if (with_gtk == 3)
-#endif
     gdk_disable_multidevice();
 #endif
 #endif
@@ -3800,18 +3082,12 @@ bool at_dock_mode = FALSE;
   gtk_init(&argc, &argv);
 
 #if TAB_CLOSE_BUTTON
-#ifdef RULE_THEM_ALL
-  if (with_gtk == 2)
-#endif
-#if defined(RULE_THEM_ALL) || !GTK_CHECK_VERSION(2,91,6)
+#if !GTK_CHECK_VERSION(2,91,6)
     gtk_rc_parse_string("style \"evilvte\" { GtkButton::default-border = { 0, 0, 0, 0 } GtkButton::default-outside-border = { 0, 0, 0, 0 } GtkButton::inner-border = { 0, 0, 0, 0 } GtkWidget::focus-line-width = 0 xthickness = 0 ythickness = 0 } widget_class \"*.GtkNotebook.GtkHBox.GtkButton\" style \"evilvte\"");
 #endif
 #endif
 
-#if defined(GTK3_CSS) && (defined(RULE_THEM_ALL) || GTK_CHECK_VERSION(2,91,6))
-#ifdef RULE_THEM_ALL
-  if (with_gtk == 3)
-#endif
+#if GTK_CHECK_VERSION(2,91,6)
   {
     GtkCssProvider *provider = gtk_css_provider_new();
     gtk_css_provider_load_from_data(provider, GTK3_CSS, -1, NULL);
@@ -3821,19 +3097,11 @@ bool at_dock_mode = FALSE;
 #endif
 
 #ifdef TAB_LABEL
-#ifdef RULE_THEM_ALL
-  if (with_gtk == 3)
-    textdomain("gtk30");
-  else
-    textdomain("gtk20");
-#endif
-#ifndef RULE_THEM_ALL
 #if GTK_CHECK_VERSION(2,90,0)
   textdomain("gtk30");
 #endif
 #if !GTK_CHECK_VERSION(2,90,0)
   textdomain("gtk20");
-#endif
 #endif
 #endif
 
@@ -3851,10 +3119,7 @@ bool at_dock_mode = FALSE;
 
   main_window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
-#ifdef RULE_THEM_ALL
-  if (has_resize_grip)
-#endif
-#if defined(RULE_THEM_ALL) || defined(GTK_HAS_RESIZE_GRIP)
+#if defined(GTK_HAS_RESIZE_GRIP)
   {
 #if defined(HOTKEY_TOGGLE_STATUS_BAR) || defined(MENU_TOGGLE_STATUS_BAR)
     status_bar_resize_grip = gtk_window_resize_grip_is_visible(GTK_WINDOW(main_window));
@@ -3900,10 +3165,7 @@ bool at_dock_mode = FALSE;
   gtk_notebook_set_show_border(GTK_NOTEBOOK(notebook), SHOW_WINDOW_BORDER);
 #endif
 
-#ifdef RULE_THEM_ALL
-  if (with_gtk == 2)
-#endif
-#if defined(RULE_THEM_ALL) || !GTK_CHECK_VERSION(2,90,0)
+#if !GTK_CHECK_VERSION(2,90,0)
   {
 #ifdef TAB_BORDER
     gtk_notebook_set_tab_border(GTK_NOTEBOOK(notebook), TAB_BORDER);
@@ -3934,11 +3196,6 @@ bool at_dock_mode = FALSE;
   gtk_widget_set_can_focus(notebook, FALSE);
 
 #if defined(TOGGLE_BG_OPACITY) || BACKGROUND_OPACITY
-#ifdef RULE_THEM_ALL
-  if (with_gtk == 3)
-    gtk_widget_set_visual(main_window, gdk_screen_get_rgba_visual(gtk_widget_get_screen(main_window)));
-  else
-#endif
     gtk_widget_set_colormap(main_window, gdk_screen_get_rgba_colormap(gtk_widget_get_screen(main_window)));
 #endif
 
@@ -3950,11 +3207,6 @@ bool at_dock_mode = FALSE;
 #if EXPORT_WINDOWID
   gtk_widget_realize(main_window);
   char windowid[16];
-#ifdef RULE_THEM_ALL
-  if (with_gtk == 3)
-    g_snprintf(windowid, 16, "%d", (int)gdk_x11_window_get_xid(gtk_widget_get_window(main_window)));
-  else
-#endif
     g_snprintf(windowid, 16, "%d", (int)gdk_x11_drawable_get_xid(EVILVTE_GET_WINDOW(main_window)));
   setenv("WINDOWID", windowid, TRUE);
 #endif
@@ -4039,9 +3291,6 @@ bool at_dock_mode = FALSE;
     gtk_window_parse_geometry(GTK_WINDOW(main_window), command_geometry);
 #endif
 
-#ifdef RULE_THEM_ALL
-  if (with_gtk == 3)
-#endif
   {
 #ifdef VTE_FUNNY
 #if COMMAND_TAB_NUMBERS
